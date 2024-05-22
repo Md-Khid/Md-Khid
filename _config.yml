@@ -1,16 +1,12 @@
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <link rel="alternate stylesheet" type="text/css" href="resource://gre-resources/plaintext.css"
-
-      title="Wrap Long Lines">
-  </head>
-  <body>
-    <pre># Site settings
+# Site settings
 title: Muhd Jamaldin
 email: jamaldin.md@hotmail.com
 url: https://md-khid.github.io/
-description: "<p>An ounce of prevention is worth a pound of cure. <br> - Benjamin Franklin</p>"
+description: "
+
+An ounce of prevention is worth a pound of cure. 
+ - Benjamin Franklin
+"
 
 
 # Color settings (hex-codes without the leading hash-tag)
@@ -31,7 +27,3 @@ social:
 # Build settings
 markdown: kramdown
 permalink: pretty
-</pre>
-    
-  </body>
-</html>
