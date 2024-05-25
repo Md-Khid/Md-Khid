@@ -12,11 +12,9 @@
             /* You can add additional background properties here */
             color: white; /* Set font color to white */
         }
-        .brand-heading {
+        .intro {
+            padding-top: 50px; /* Add 50px of padding above the header */
             text-align: center; /* Center align the text */
-        }
-        .main-content {
-            font-size: 18px; /* Set the font size of main content */
         }
     </style>
 </head>
@@ -38,17 +36,16 @@
 <!-- Main Content -->
 <div class="container">
     <!-- Your main content goes here -->
-    <p class="main-content">COVID-19 Country Grouping Findings.</p>
+    <p>COVID-19 Country Grouping Findings.</p>
 </div>
 
 <!-- Footer -->
-<footer style="text-align: center;">
-    <div class="container">
-        <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; {{ site.footer }} 20{{ site.time | date: '%y' }}</p>
     </div>
 </footer>
 
 </body>
 </html>
-
 
