@@ -1,75 +1,51 @@
-<!-- Findings Section -->
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <style>
-      /* Add some bottom margin to the images */
-      .image {
-        margin-bottom: 20px; /* Adjust the value as needed */
-      }
-    </style>
-  </head>
-  <body>
-    <section id="download" class="content-section text-center">
-      <div class="download-section">
-        <div class="container">
-          <div class="col-lg-8 col-lg-offset-2">
-            <h2>Projects</h2>
-            <p>Welcome! Here, I share a selection of projects that I've worked on. Each project reflects my
-              journey of continuous learning and exploration, providing opportunities to apply my skills and develop both 
-              personally and professionally. Please take a moment to explore the descriptions below, and I hope you find them 
-              insightful.</p>
-           
-            <p style="font-size: 20px;"><strong>COVID-19 Country Grouping</strong></p>
-            <p>This project employs a simple K-means clustering algorithm, along with tools like IBM SPSS Modeler and JMP 
-              to evaluate COVID-19 risk levels across countries. It analyses factors such as demographics, GDP and disease 
-              rates while managing multicollinearity to ensure the validity of the clustering outcomes. The simple K-means 
-              method effectively groups nations by COVID-19 risk offering a benchmark for comparison. This facilitates a 
-              mutual learning process allowing governments to learn from each other and adapt policies to their development 
-              status and specific COVID-19 risks.</p>
-           <a href="download2.html"class="btn btn-default btn-lg" style="color: black; border-color: black;">View Findings</a>
-           <a href="https://github.com/Md-Khid/COVID-19_Country_Grouping" class="btn btn-default btn-lg" style="color: black; border-color: black;">View Repository</a>
-            <p>&nbsp;</p>
-            <p style="font-size: 20px;"><strong> Patient Survey Experience</strong></p>
-            <p>This project integrates Python, SQL and R to streamline data preparation, focusing on data merging and 
-              cleansing. It utilises surveys to assess patient satisfaction through a Linear Model. Data is transferred 
-              from Excel to MySQL, forming precise database tables. SQL further refines these tables to ensure data consistency.
-              R analyses this data, applying Linear Regression to predict satisfaction and identify influential variables. 
-              Finally, a performance impact chart is created to highlight areas for improvement, suggesting ward adjustments to
-              enhance patient satisfaction.</p>
-            <a href="https://github.com/Md-Khid/Data_Piping_and_Wrangling_Patient_Survey_Experience" class="btn btn-default btn-lg" style="color: black; border-color: black;">View Repository</a>
-            <p>&nbsp;</p>
-            <p style="font-size: 20px;"><strong> Credit Card Billable Prediction</strong></p>
-            <p>This project conducted an in-depth analysis of a credit facility dataset, uncovering insights into customer
-              demographics, credit behaviour and financial trends through various visualisation techniques. It then developed
-              a multiple linear regression model to accurately predict billable amounts, demonstrating its reliability in
-              extrapolating to new data. Through predictive modelling, the project provided actionable insights that aid in
-              resource allocation, risk assessment and strategic planning, thereby enhancing the efficiency and performance
-              of credit facilities.</p>
-            <a href="https://github.com/Md-Khid/MLR_Credit_Card_Billable_Prediction" class="btn btn-default btn-lg" style="color: black; border-color: black;">View Repository</a>
-            <p>&nbsp;</p>
-            <p style="font-size: 20px;"><strong> Loan Status Prediction</strong></p>
-            <p>This project employs an Artificial Neural Network to predict customer default risks within a dataset of
-              credit facilities. It involves data processing in Python, addressing missing values and encoding categorical
-              variables. Exploratory Data Analysis techniques are utilised to understand data distributions and identify
-              outliers. The model’s performance is assessed using metrics such as accuracy, precision, recall, F1 score and
-              AUC-ROC curve analysis. Additionally, the importance of predictors is evaluated to interpret the model’s
-              decision-making process, thereby contributing to improved risk assessment strategies.</p>
-            <a href="https://github.com/Md-Khid/ANN_Loan_Status_Prediction" class="btn btn-default btn-lg" style="color: black; border-color: black;">View Repository</a>
-          <p>&nbsp;</p>
-            <p style="font-size: 20px;"><strong>Civil Conflict And Food Aid</strong></p>
-            <p>This project analyses governance, food aid and conflict dynamics in Sub-Saharan Africa using data analysis
-              and visualisation. It explores correlations among governance indicators, economic factors and humanitarian
-              assistance, revealing how autocratic governance, limited economic growth and uneven aid distribution worsen
-              conflicts. Emphasising the complexity of aid distribution's impact on conflict escalation, the project aims
-              to deepen understanding and propose strategies for mitigating conflicts and fostering sustainable development
-              in the region.</p>
-            <a href="https://github.com/Md-Khid/Civil_Conflict_And_Food_Aid" class="btn btn-default btn-lg" style="color: black; border-color: black;">View Repository</a>
-          </div>
-        </div>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <style>
+    /* Add some bottom margin to the images */
+    .image {
+      margin-bottom: 20px; /* Adjust the value as needed */
+    }
+
+    /* Styles for the download section */
+    #download.download-section {
+      width: 100%;
+      padding: 50px 0;
+      color: #fff;
+      background: url(/img/downloads-bg.jpg) no-repeat center center scroll;
+      background-color: {{ site.color.primary-dark }};
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <section id="download" class="content-section text-center download-section">
+    <div class="container">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>Findings</h2>
+        <p style="font-size: 20px;"><strong>COVID-19 Country Grouping</strong></p>
+        <p>This project employs a simple K-means clustering algorithm, along with tools like IBM SPSS Modeler and JMP 
+          to evaluate COVID-19 risk levels across countries. It analyses factors such as demographics, GDP and disease 
+          rates while managing multicollinearity to ensure the validity of the clustering outcomes. The simple K-means 
+          method effectively groups nations by COVID-19 risk offering a benchmark for comparison. This facilitates a 
+          mutual learning process allowing governments to learn from each other and adapt policies to their development 
+          status and specific COVID-19 risks.</p>
+        <p>&nbsp;</p>
+        <p style="font-size: 20px;"><strong> Patient Survey Experience</strong></p>
+        <p>This project integrates Python, SQL and R to streamline data preparation, focusing on data merging and 
+          cleansing. It utilises surveys to assess patient satisfaction through a Linear Model. Data is transferred 
+          from Excel to MySQL, forming precise database tables. SQL further refines these tables to ensure data consistency.
+          R analyses this data, applying Linear Regression to predict satisfaction and identify influential variables. 
+          Finally, a performance impact chart is created to highlight areas for improvement, suggesting ward adjustments to
+          enhance patient satisfaction.</p>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+</body>
 </html>
 
 
