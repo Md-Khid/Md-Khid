@@ -42,9 +42,15 @@
 <!-- Footer -->
 <footer style="text-align: center;">
     <div class="container">
-        <p>Copyright &copy; Muhd Jamaldin <?php echo date("Y"); ?></p>
+        <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
     </div>
 </footer>
+
+<script>
+    // JavaScript to insert current year into footer
+    document.getElementById("footerYear").innerHTML += " " + new Date().getFullYear();
+</script>
+
 
 
 </body>
