@@ -40,11 +40,17 @@
 </div>
 
 <!-- Footer -->
-<footer>
-    <div class="container text-center">
-        <p>Copyright &copy; {{ site.footer }} 20{{ site.time | date: '%y' }}</p>
+<footer style="text-align: center;">
+    <div class="container">
+        <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
     </div>
 </footer>
+
+<script>
+    // JavaScript to insert current year into footer
+    document.getElementById("footerYear").innerHTML += " " + new Date().getFullYear();
+</script>
+
 
 </body>
 </html>
