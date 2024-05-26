@@ -6,53 +6,57 @@
     <title>Patient Survey Experience</title>
     <style>
         html, body {
-            height: 100%; /* Set the height to take full viewport height */
-            margin: 0; /* Reset default margin */
-            display: flex; /* Enable flexbox */
-            flex-direction: column; /* Stack elements vertically */
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
         }
         body {
             background-image: url("background.jpg");
             background-size: cover;
             color: white;
             font-family: "Century Schoolbook", serif;
-            font-weight: lighter; /* Make font thinner for all text */
-            position: relative; /* Set position to relative for footer positioning */
+            font-weight: lighter;
+            position: relative;
         }
         .intro {
             padding-top: 100px;
             text-align: center;
         }
+        .intro h1.brand-heading {
+            font-size: 26px; /* Decreased font size for header */
+        }
         .container {
-            flex: 1; /* Allow container to grow and fill available space */
-            padding: 0 20px; /* Padding for content */
+            flex: 1;
+            padding: 0 20px;
         }
         .container p {
-            font-size: 22px;
+            font-size: 20px; /* Decreased font size for content */
             text-align: center;
             line-height: 1.5;
         }
-        .back-link {
-            font-size: 20px;
+  .back-link {
+            font-size: 18px;
             color: black;
             text-decoration: none;
             border: 0.5px solid black;
             border-radius: 10px;
-            padding: 10px;
+            padding: 10px 30px; /* Increase horizontal padding to make the border box wider */
             transition: background-color 0.3s ease;
         }
+
         .back-link:hover {
             background-color: #219BB3;
         }
         footer {
             text-align: center;
-            position: relative; /* Footer will be at the end of content */
-            width: 100%; /* Ensure footer spans the full width */
-            padding: 20px 0; /* Add padding to footer */
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for readability */
+            position: relative;
+            width: 100%;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.5);
         }
         footer p {
-            margin: 0; /* Remove default margin from paragraph inside footer */
+            margin: 0;
         }
     </style>
 </head>
@@ -79,6 +83,7 @@
         applying Linear Regression to predict satisfaction and identify influential variables. Finally, a performance impact
         chart is created to highlight areas for improvement, suggesting ward adjustments to enhance patient satisfaction.
     </p>
+    <p>&nbsp;</p>
     <!-- Back Button -->
     <p style="text-align: center;">
         <a href="javascript:history.back()" class="back-link">
