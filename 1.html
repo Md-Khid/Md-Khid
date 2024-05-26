@@ -100,15 +100,14 @@
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         var clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
 
-        if (scrollHeight - scrollTop === clientHeight) {
-            footer.style.display = 'block'; // Show footer when scrolled to bottom
+        if ((scrollHeight - scrollTop === clientHeight) || (clientHeight >= scrollHeight)) {
+            footer.style.display = 'block'; // Show footer when scrolled to bottom or content fits within viewport
         } else {
-            footer.style.display = 'none'; // Hide footer when not scrolled to bottom
+            footer.style.display = 'none'; // Hide footer when not scrolled to bottom or content does not fit within viewport
         }
     });
 </script>
 
 </body>
 </html>
-
 
