@@ -85,11 +85,19 @@
     </p>
     <p>&nbsp;</p>
     <!-- Back Button -->
-    <p style="text-align: center;">
-        <a href="javascript:history.back()" class="back-link">
-            <strong style="font-family: Montserrat, sans-serif;">BACK</strong>
-        </a>
-    </p>
+    <button class="back-link" onclick="goBack()">Back</button>
+
+<script>
+    function goBack() {
+        // Check if JavaScript is enabled
+        if (typeof window.history !== 'undefined' && typeof window.history.back === 'function') {
+            // JavaScript is enabled, go back to the previous page
+            window.history.back();
+        } else {
+            // JavaScript is not enabled, redirect to the specified page
+            window.location.href = 'https://md-khid.github.io/';
+        }
+    }
 </div>
 
 <!-- Footer -->
