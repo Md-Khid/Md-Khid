@@ -14,6 +14,7 @@
             font-family: "Century Schoolbook", serif; /* Set font to Century Schoolbook */
             padding: 0;
             margin: 0;
+            font-weight: lighter; /* Set font weight to lighter for all text */
         }
         .intro {
             padding-top: 100px; /* Add 50px of padding above the header */
@@ -27,15 +28,17 @@
         }
         .back-link {
             font-size: 20px;
-            color: white; /* Set text color to white */
+            color: black; /* Set text color to black */
+            text-decoration: none; /* Remove underline */
+            border: 0.5px solid black; /* Add border */
+            border-radius: 10px; /* Add border radius */
+            padding: 10px; /* Add padding */
+            transition: background-color 0.3s ease; /* Add transition */
         }
 
-        /* Responsive styles */
-        @media screen and (max-width: 768px) {
-            .container p {
-                margin-left: 20px; /* Reduce left margin */
-                margin-right: 20px; /* Reduce right margin */
-            }
+        /* Hover effect */
+        .back-link:hover {
+            background-color: #219BB3; /* Change background color on hover */
         }
     </style>
 </head>
@@ -63,20 +66,11 @@
     COVID-19 Country Grouping Findings.COVID-19 Country Grouping Findings.COVID-19 Country Grouping Findings.
     </p>
     <!-- Back Button -->
-<p style="text-align: center;">
-    <a href="javascript:history.back()" class="back-link" style="border: 0.5px solid black; padding: 10px; text-decoration: none; border-radius: 10px; color: black; transition: background-color 0.3s ease;">
-        <strong>Back</strong>
-    </a>
-</p>
-
-<style>
-    .back-link:hover {
-        background-color: #219BB3; /* Use the color code for a blue-grey scale color */
-    }
-</style>
-
-
-
+    <p style="text-align: center;">
+        <a href="javascript:history.back()" class="back-link">
+            <strong>Back</strong>
+        </a>
+    </p>
 </div>
 
 <!-- Footer -->
@@ -93,5 +87,6 @@
 
 </body>
 </html>
+
 
 
