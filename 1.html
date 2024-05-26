@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <!-- Include any necessary stylesheets or scripts -->
     <style>
         body {
             background-image: url("background.jpg");
@@ -16,6 +15,7 @@
             font-weight: lighter; /* Make font thinner for all text */
             min-height: 100vh; /* Ensure content takes up at least the full viewport height */
             position: relative; /* Set position to relative for footer positioning */
+            padding-bottom: 60px; /* Add bottom padding to push content above the footer */
         }
         .intro {
             padding-top: 100px;
@@ -41,11 +41,12 @@
         }
         footer {
             text-align: center;
-            position: absolute; /* Set position to absolute for fixed positioning */
-            bottom: 0; /* Align footer to bottom of viewport */
+            position: fixed; /* Changed from absolute to fixed */
+            bottom: 0; /* Keep footer at the bottom */
             width: 100%; /* Ensure footer spans the full width */
             padding: 20px 0; /* Add padding to footer */
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for readability */
+            z-index: -1; /* Set z-index to -1 to ensure it doesn't overlap other content */
         }
         footer p {
             margin: 0; /* Remove default margin from paragraph inside footer */
@@ -69,7 +70,6 @@
 
 <!-- Main Content -->
 <div class="container">
-    <!-- Your main content goes here -->
     <p>This project integrates Python, SQL and R to streamline data preparation, focusing on data merging and 
               cleansing. It utilises surveys to assess patient satisfaction through a Linear Model. Data is transferred 
               from Excel to MySQL, forming precise database tables. SQL further refines these tables to ensure data consistency.
@@ -80,14 +80,14 @@
     <!-- Back Button -->
     <p style="text-align: center;">
         <a href="javascript:history.back()" class="back-link">
-            <strong style="font-family: Montserrat, sans-serif;">BACK</strong> <!-- Set font to Montserrat Regular -->
+            <strong style="font-family: Montserrat, sans-serif;">BACK</strong>
         </a>
     </p>
 </div>
 
 <!-- Footer -->
 <footer>
-    <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
+    <p id="footerYear">Copyright © Muhd Jamaldin</p>
 </footer>
 
 <script>
