@@ -41,7 +41,7 @@
         }
         footer {
             text-align: center;
-            position: absolute; /* Set position to absolute for fixed positioning */
+            position: fixed; /* Change position to fixed for fixed positioning */
             bottom: 0; /* Align footer to bottom of viewport */
             width: 100%; /* Ensure footer spans the full width */
             padding: 20px 0; /* Add padding to footer */
@@ -87,19 +87,9 @@
 
 <!-- Footer -->
 <footer>
-    <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
+    <p>Your footer content here.</p>
 </footer>
-
-<script>
-    // JavaScript to insert current year into footer
-    document.getElementById("footerYear").innerHTML += " " + new Date().getFullYear();
-
-    // Remove the .html extension from the URL
-    if (history.replaceState) {
-        var cleanURL = window.location.pathname.replace(/\.html$/, '');
-        history.replaceState(null, null, cleanURL);
-    }
-</script>
 
 </body>
 </html>
+
