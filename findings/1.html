@@ -12,6 +12,8 @@
             /* You can add additional background properties here */
             color: white; /* Set font color to white */
             font-family: "Century Schoolbook", serif; /* Set font to Century Schoolbook */
+            padding: 0;
+            margin: 0;
         }
         .intro {
             padding-top: 100px; /* Add 50px of padding above the header */
@@ -20,13 +22,20 @@
         .container p {
             font-size: 22px; /* Increase font size for main content */
             text-align: center; /* Center align the paragraph */
-            margin-left: 240px; /* Add margin on the left side */
-            margin-right: 240px; /* Add margin on the right side */
             line-height: 1.5; /* Increase line spacing */
+            padding: 0 20px; /* Add padding to the sides */
         }
         .back-link {
             font-size: 20px;
             color: white; /* Set text color to white */
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .container p {
+                margin-left: 20px; /* Reduce left margin */
+                margin-right: 20px; /* Reduce right margin */
+            }
         }
     </style>
 </head>
@@ -71,6 +80,5 @@
 
 </body>
 </html>
-
 
 
