@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,10 +90,13 @@
 
 <script>
     function goBack() {
-        // Check if JavaScript is enabled
-        if (typeof window.history !== 'undefined' && typeof window.history.back === 'function') {
-            // JavaScript is enabled, go back to the previous page
+        // Check if JavaScript is enabled and there is a previous page in the history
+        if (typeof window.history !== 'undefined' && window.history.length > 1) {
+            // JavaScript is enabled and there is a previous page, go back to the previous page
             window.history.back();
+        } else {
+            // JavaScript is enabled but there is no previous page, redirect to the specified page
+            window.location.href = 'https://md-khid.github.io/';
         }
     }
 </div>
@@ -115,4 +119,3 @@
 
 </body>
 </html>
-
