@@ -35,7 +35,7 @@
             text-align: center;
             line-height: 1.5;
         }
-  .back-link {
+        .back-link {
             font-size: 18px;
             color: black;
             text-decoration: none;
@@ -83,9 +83,9 @@
         nations by COVID-19 risk offering a benchmark for comparison. This facilitates a mutual learning process allowing 
         governments to learn from each other and adapt policies to their development status and specific COVID-19 risks.
     </p>
-    <p>&nbsp;</p>
+    <p> </p>
     <!-- Back Button -->
-    <button class="back-link" onclick="goBack()">Back</button>
+    <a class="back-link" href="https://md-khid.github.io/" onclick="goBack(); return false;">Back</a>
 
 <script>
     function goBack() {
@@ -93,9 +93,6 @@
         if (typeof window.history !== 'undefined' && typeof window.history.back === 'function') {
             // JavaScript is enabled, go back to the previous page
             window.history.back();
-        } else {
-            // JavaScript is not enabled, redirect to the specified page
-            window.location.href = 'https://md-khid.github.io/';
         }
     }
 </div>
@@ -118,5 +115,4 @@
 
 </body>
 </html>
-
 
