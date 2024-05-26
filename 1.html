@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Test2</title>
     <style>
         body {
             background-image: url("background.jpg");
@@ -15,7 +15,6 @@
             font-weight: lighter; /* Make font thinner for all text */
             min-height: 100vh; /* Ensure content takes up at least the full viewport height */
             position: relative; /* Set position to relative for footer positioning */
-            padding-bottom: 60px; /* Add bottom padding to push content above the footer */
         }
         .intro {
             padding-top: 100px;
@@ -41,12 +40,11 @@
         }
         footer {
             text-align: center;
-            position: fixed; /* Changed from absolute to fixed */
-            bottom: 0; /* Keep footer at the bottom */
+            position: relative; /* Changed from fixed to relative */
+            bottom: 0; /* Keep footer at the bottom of the content */
             width: 100%; /* Ensure footer spans the full width */
             padding: 20px 0; /* Add padding to footer */
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for readability */
-            z-index: -1; /* Set z-index to -1 to ensure it doesn't overlap other content */
         }
         footer p {
             margin: 0; /* Remove default margin from paragraph inside footer */
