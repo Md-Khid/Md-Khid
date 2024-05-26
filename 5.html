@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civil Conflict And Food Aid</title>
-    <!-- Include any necessary stylesheets or scripts -->
     <style>
+        html, body {
+            height: 100%; /* Set the height to take full viewport height */
+            margin: 0; /* Reset default margin */
+            display: flex; /* Enable flexbox */
+            flex-direction: column; /* Stack elements vertically */
+        }
         body {
             background-image: url("background.jpg");
             background-size: cover;
             color: white;
             font-family: "Century Schoolbook", serif;
-            padding: 0;
-            margin: 0;
             font-weight: lighter; /* Make font thinner for all text */
-            min-height: 100vh; /* Ensure content takes up at least the full viewport height */
             position: relative; /* Set position to relative for footer positioning */
         }
         .intro {
             padding-top: 100px;
             text-align: center;
         }
+        .container {
+            flex: 1; /* Allow container to grow and fill available space */
+            padding: 0 20px; /* Padding for content */
+        }
         .container p {
             font-size: 22px;
             text-align: center;
             line-height: 1.5;
-            padding: 0 20px;
         }
         .back-link {
             font-size: 20px;
@@ -41,8 +46,7 @@
         }
         footer {
             text-align: center;
-            position: absolute; /* Set position to absolute for fixed positioning */
-            bottom: 0; /* Align footer to bottom of viewport */
+            position: relative; /* Footer will be at the end of content */
             width: 100%; /* Ensure footer spans the full width */
             padding: 20px 0; /* Add padding to footer */
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for readability */
@@ -69,25 +73,23 @@
 
 <!-- Main Content -->
 <div class="container">
-    <!-- Your main content goes here -->
-    <p>This project analyses governance, food aid and conflict dynamics in Sub-Saharan Africa using data analysis
-              and visualisation. It explores correlations among governance indicators, economic factors and humanitarian
-              assistance, revealing how autocratic governance, limited economic growth and uneven aid distribution worsen
-              conflicts. Emphasising the complexity of aid distribution's impact on conflict escalation, the project aims
-              to deepen understanding and propose strategies for mitigating conflicts and fostering sustainable development
-              in the region.
+    <p>This project analyses governance, food aid and conflict dynamics in Sub-Saharan Africa using data analysis and
+        visualisation. It explores correlations among governance indicators, economic factors and humanitarian assistance,
+        revealing how autocratic governance, limited economic growth and uneven aid distribution worsen conflicts. 
+        Emphasising the complexity of aid distribution's impact on conflict escalation, the project aims to deepen 
+        understanding and propose strategies for mitigating conflicts and fostering sustainable development in the region.
     </p>
     <!-- Back Button -->
     <p style="text-align: center;">
         <a href="javascript:history.back()" class="back-link">
-            <strong style="font-family: Montserrat, sans-serif;">BACK</strong> <!-- Set font to Montserrat Regular -->
+            <strong style="font-family: Montserrat, sans-serif;">BACK</strong>
         </a>
     </p>
 </div>
 
 <!-- Footer -->
 <footer>
-    <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
+    <p id="footerYear">Copyright © Muhd Jamaldin</p>
 </footer>
 
 <script>
