@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit Card Billable Prediction</title>
-    <!-- Include any necessary stylesheets or scripts -->
     <style>
+        html, body {
+            height: 100%; /* Set the height to take full viewport height */
+            margin: 0; /* Reset default margin */
+            display: flex; /* Enable flexbox */
+            flex-direction: column; /* Stack elements vertically */
+        }
         body {
             background-image: url("background.jpg");
             background-size: cover;
             color: white;
             font-family: "Century Schoolbook", serif;
-            padding: 0;
-            margin: 0;
             font-weight: lighter; /* Make font thinner for all text */
-            min-height: 100vh; /* Ensure content takes up at least the full viewport height */
             position: relative; /* Set position to relative for footer positioning */
         }
         .intro {
             padding-top: 100px;
             text-align: center;
         }
+        .container {
+            flex: 1; /* Allow container to grow and fill available space */
+            padding: 0 20px; /* Padding for content */
+        }
         .container p {
             font-size: 22px;
             text-align: center;
             line-height: 1.5;
-            padding: 0 20px;
         }
         .back-link {
             font-size: 20px;
@@ -41,8 +46,7 @@
         }
         footer {
             text-align: center;
-            position: absolute; /* Set position to absolute for fixed positioning */
-            bottom: 0; /* Align footer to bottom of viewport */
+            position: relative; /* Footer will be at the end of content */
             width: 100%; /* Ensure footer spans the full width */
             padding: 20px 0; /* Add padding to footer */
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for readability */
@@ -69,25 +73,23 @@
 
 <!-- Main Content -->
 <div class="container">
-    <!-- Your main content goes here -->
-    <p>This project conducted an in-depth analysis of a credit facility dataset, uncovering insights into customer
-              demographics, credit behaviour and financial trends through various visualisation techniques. It then developed
-              a multiple linear regression model to accurately predict billable amounts, demonstrating its reliability in
-              extrapolating to new data. Through predictive modelling, the project provided actionable insights that aid in
-              resource allocation, risk assessment and strategic planning, thereby enhancing the efficiency and performance
-              of credit facilities.
+    <p>This project conducted an in-depth analysis of a credit facility dataset, uncovering insights into customer demographics,
+        credit behaviour and financial trends through various visualisation techniques. It then developed a multiple linear
+        regression model to accurately predict billable amounts, demonstrating its reliability in extrapolating to new data.
+        Through predictive modelling, the project provided actionable insights that aid in resource allocation, risk assessment
+        and strategic planning, thereby enhancing the efficiency and performance of credit facilities.
     </p>
     <!-- Back Button -->
     <p style="text-align: center;">
         <a href="javascript:history.back()" class="back-link">
-            <strong style="font-family: Montserrat, sans-serif;">BACK</strong> <!-- Set font to Montserrat Regular -->
+            <strong style="font-family: Montserrat, sans-serif;">BACK</strong>
         </a>
     </p>
 </div>
 
 <!-- Footer -->
 <footer>
-    <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
+    <p id="footerYear">Copyright © Muhd Jamaldin</p>
 </footer>
 
 <script>
