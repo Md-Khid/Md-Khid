@@ -14,6 +14,8 @@
             padding: 0;
             margin: 0;
             font-weight: lighter; /* Make font thinner for all text */
+            min-height: 100vh; /* Ensure content takes up at least the full viewport height */
+            position: relative; /* Set position to relative for footer positioning */
         }
         .intro {
             padding-top: 100px;
@@ -36,6 +38,17 @@
         }
         .back-link:hover {
             background-color: #219BB3;
+        }
+        footer {
+            text-align: center;
+            position: absolute; /* Set position to absolute for fixed positioning */
+            bottom: 0; /* Align footer to bottom of viewport */
+            width: 100%; /* Ensure footer spans the full width */
+            padding: 20px 0; /* Add padding to footer */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for readability */
+        }
+        footer p {
+            margin: 0; /* Remove default margin from paragraph inside footer */
         }
     </style>
 </head>
@@ -71,10 +84,8 @@
 </div>
 
 <!-- Footer -->
-<footer style="text-align: center;">
-    <div class="container">
-        <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
-    </div>
+<footer>
+    <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
 </footer>
 
 <script>
@@ -84,7 +95,3 @@
 
 </body>
 </html>
-
-
-
-
