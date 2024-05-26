@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVID-19 Country Grouping</title>
+    <title>Patient Survey Experience</title>
     <!-- Include any necessary stylesheets or scripts -->
     <style>
         body {
@@ -16,7 +16,6 @@
             font-weight: lighter; /* Make font thinner for all text */
             min-height: 100vh; /* Ensure content takes up at least the full viewport height */
             position: relative; /* Set position to relative for footer positioning */
-            padding-bottom: 50px; /* Adjust padding to make space for footer */
         }
         .intro {
             padding-top: 100px;
@@ -42,10 +41,8 @@
         }
         footer {
             text-align: center;
-            display: none; /* Initially hide the footer */
-            position: fixed; /* Set position to fixed for fixed positioning */
-            bottom: 0; /* Align footer to bottom of page */
-            left: 0; /* Align footer to left edge of page */
+            position: absolute; /* Set position to absolute for fixed positioning */
+            bottom: 0; /* Align footer to bottom of viewport */
             width: 100%; /* Ensure footer spans the full width */
             padding: 20px 0; /* Add padding to footer */
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for readability */
@@ -63,7 +60,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1 class="brand-heading">COVID-19 Country Grouping Findings</h1>
+                    <h1 class="brand-heading">Patient Survey Experience Findings</h1>
                 </div>
             </div>
         </div>
@@ -89,25 +86,20 @@
 </div>
 
 <!-- Footer -->
-<footer id="footer">
-    <p>Your footer content here.</p>
+<footer>
+    <p id="footerYear">Copyright &copy; Muhd Jamaldin</p>
 </footer>
 
 <script>
-    window.addEventListener('scroll', function() {
-        var footer = document.getElementById('footer');
-        var scrollHeight = document.documentElement.scrollHeight;
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        var clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
+    // JavaScript to insert current year into footer
+    document.getElementById("footerYear").innerHTML += " " + new Date().getFullYear();
 
-        if ((scrollHeight - scrollTop === clientHeight) || (clientHeight >= scrollHeight)) {
-            footer.style.display = 'block'; // Show footer when scrolled to bottom or content fits within viewport
-        } else {
-            footer.style.display = 'none'; // Hide footer when not scrolled to bottom or content does not fit within viewport
-        }
-    });
+    // Remove the .html extension from the URL
+    if (history.replaceState) {
+        var cleanURL = window.location.pathname.replace(/\.html$/, '');
+        history.replaceState(null, null, cleanURL);
+    }
 </script>
 
 </body>
 </html>
-
