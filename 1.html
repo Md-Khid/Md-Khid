@@ -16,6 +16,7 @@
             font-weight: lighter; /* Make font thinner for all text */
             min-height: 100vh; /* Ensure content takes up at least the full viewport height */
             position: relative; /* Set position to relative for footer positioning */
+            padding-bottom: 50px; /* Adjust padding to make space for footer */
         }
         .intro {
             padding-top: 100px;
@@ -41,8 +42,10 @@
         }
         footer {
             text-align: center;
-            position: fixed; /* Change position to fixed for fixed positioning */
-            bottom: 0; /* Align footer to bottom of viewport */
+            display: none; /* Initially hide the footer */
+            position: fixed; /* Set position to fixed for fixed positioning */
+            bottom: 0; /* Align footer to bottom of page */
+            left: 0; /* Align footer to left edge of page */
             width: 100%; /* Ensure footer spans the full width */
             padding: 20px 0; /* Add padding to footer */
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color for readability */
@@ -86,9 +89,24 @@
 </div>
 
 <!-- Footer -->
-<footer>
+<footer id="footer">
     <p>Your footer content here.</p>
 </footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var footer = document.getElementById('footer');
+        var scrollHeight = document.documentElement.scrollHeight;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0;
+
+        if (scrollHeight - scrollTop === clientHeight) {
+            footer.style.display = 'block'; // Show footer when scrolled to bottom
+        } else {
+            footer.style.display = 'none'; // Hide footer when not scrolled to bottom
+        }
+    });
+</script>
 
 </body>
 </html>
